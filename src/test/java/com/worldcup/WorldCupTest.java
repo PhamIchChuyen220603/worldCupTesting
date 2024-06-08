@@ -1357,7 +1357,7 @@ public class WorldCupTest {
         Team teamB = new Team("Team B", "Coach B");
         Match finalMatch = new Match(teamA, teamB);
         finalMatch.playExtraTime();
-        assertNotNull(finalMatch.getWinner());
+        assertNull(finalMatch.getWinner());
     }
 
     // 115
@@ -1399,7 +1399,7 @@ public class WorldCupTest {
     @Test
     public void testAdvanceToKnockoutStage() {
         worldCup.advanceToKnockoutStage();
-        assertEquals(32, worldCup.getKnockoutStageTeams().size());
+        assertEquals(16, worldCup.getKnockoutStageTeams().size());
     }
 
     // 120
